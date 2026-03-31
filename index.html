@@ -10,414 +10,469 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
-            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
-        
+
         .container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: #fff;
+            background: white;
             border-radius: 8px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
+            max-width: 700px;
+            width: 100%;
+            padding: 50px 40px;
         }
-        
-        .header {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            padding: 40px 30px;
+
+        .logo-wrapper {
             text-align: center;
-            border-bottom: 4px solid #d4af37;
+            margin-bottom: 40px;
         }
-        
-        .logo-container {
-            margin-bottom: 15px;
-        }
-        
-        .logo-container img {
-            max-width: 180px;
+
+        .logo-wrapper img {
+            max-width: 220px;
+            width: 100%;
             height: auto;
             display: block;
-            margin: 0 auto;
         }
-        
-        .form-content {
-            padding: 40px 30px;
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
         }
-        
-        .form-title {
-            font-size: 24px;
-            font-weight: 600;
+
+        .form-header h1 {
+            font-size: 28px;
             color: #1a1a1a;
             margin-bottom: 10px;
+            font-weight: 600;
         }
-        
-        .form-subtitle {
+
+        .form-header p {
+            font-size: 16px;
             color: #666;
-            font-size: 14px;
-            margin-bottom: 30px;
             line-height: 1.6;
         }
-        
+
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 24px;
         }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #1a1a1a;
-            font-weight: 600;
-            font-size: 14px;
-        }
-        
-        .required {
-            color: #d4af37;
-        }
-        
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 12px 14px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-            font-family: inherit;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-        
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="tel"]:focus,
-        select:focus,
-        textarea:focus {
-            outline: none;
-            border-color: #d4af37;
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
-        }
-        
-        select {
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231a1a1a' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 12px center;
-            padding-right: 36px;
-        }
-        
-        textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-        
+
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
-        
+
         .form-row.full {
             grid-template-columns: 1fr;
         }
-        
-        .specs-box {
-            background: #f9f9f9;
-            border-left: 4px solid #d4af37;
-            padding: 15px;
-            border-radius: 4px;
-            margin-top: 15px;
-            font-size: 13px;
-            line-height: 1.6;
-            color: #333;
-            display: none;
-        }
-        
-        .specs-box.active {
+
+        label {
             display: block;
-        }
-        
-        .specs-box h4 {
-            color: #1a1a1a;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        
-        .spec-item {
             margin-bottom: 8px;
-        }
-        
-        .spec-label {
-            font-weight: 600;
-            color: #1a1a1a;
-        }
-        
-        .button-group {
-            display: flex;
-            gap: 15px;
-            margin-top: 35px;
-        }
-        
-        button {
-            flex: 1;
-            padding: 14px 24px;
-            border: none;
-            border-radius: 4px;
             font-size: 14px;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
+            color: #333;
         }
-        
-        .btn-submit {
-            background: linear-gradient(135deg, #d4af37 0%, #b8941d 100%);
-            color: #1a1a1a;
-        }
-        
-        .btn-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
-        }
-        
-        .btn-reset {
-            background: #f0f0f0;
-            color: #1a1a1a;
-            border: 1px solid #ddd;
-        }
-        
-        .btn-reset:hover {
-            background: #e8e8e8;
-        }
-        
-        .footer {
-            background: #f9f9f9;
-            padding: 20px 30px;
-            border-top: 1px solid #eee;
-            font-size: 12px;
-            color: #999;
-            text-align: center;
-        }
-        
-        .footer a {
+
+        label .required {
             color: #d4af37;
-            text-decoration: none;
+            margin-left: 2px;
         }
-        
-        .footer a:hover {
-            text-decoration: underline;
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.3s, box-shadow 0.3s;
         }
-        
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .radio-item,
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            cursor: pointer;
+            accent-color: #d4af37;
+        }
+
+        .radio-item label,
+        .checkbox-item label {
+            margin-bottom: 0;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        button {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 12px;
+            margin-top: 6px;
+            display: none;
+        }
+
+        .form-group.error input,
+        .form-group.error select,
+        .form-group.error textarea {
+            border-color: #e74c3c;
+        }
+
+        .form-group.error .error-message {
+            display: block;
+        }
+
+        .success-message {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 16px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
         @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+
             .form-row {
                 grid-template-columns: 1fr;
+                gap: 0;
             }
-            
-            .button-group {
-                flex-direction: column;
+
+            .form-header h1 {
+                font-size: 24px;
             }
-            
-            .form-content {
-                padding: 30px 20px;
-            }
-            
-            .header {
-                padding: 30px 20px;
+
+            .logo-wrapper img {
+                max-width: 180px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="logo-container">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACSCAYAAAC24O1pAAAACXBIWXMAABcSAAAXEgFa5qgDAAACyUlEQVR4nO3dwU7aQBCG4UXkYk6cOHEi0RNw5MiJE6/ciRPwBjwAj8ALoKCgFxQ94E0CJSfASdiWnbbZmZ2dvvvPN+uKqXSHmf98mN2d3dXlcpl+v5+mZ7NZ/vj4SN1ul+bzeXq5XKVJKSTX19c0m82oXC5TKVNI+U4ul6P5fI5ms1n6+Pigp6cny+NxOXWzf39/09PTU3p9faVut0uDwYAGgwF1Oh0qFAo0n89psVhQJpNRn98XqVQq1Ol0aDQa0XA4pFwu92Nd8bNeLBbUaDSoXq9Ts9mk5+dnOj8/p16vZzMfF6+jOp1OOjg4oK2tLb+WEq+XRqNBLy8vNJvNfKbrwM+FBYSJREzx3wfQYvhV4qeEGYqwAkxYASasABNWgAkrwIQVYMIKMGEFmLACTFgBJqwAE1aACTAAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTAAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1aACTMAJqwAE1vY4QeIL3uuF/yRAAAAAElFTkSuQmCC" alt="Simply Sheds Scotland Logo">
-            </div>
+        <!-- Logo -->
+        <div class="logo-wrapper">
+            <img src="/ss_logo.jpg" alt="Simply Sheds Scotland Logo" loading="lazy">
         </div>
-        
-        <form action="mailto:info@simplyshedsscotland.com" method="post" enctype="text/plain">
-            <div class="form-content">
-                <h2 class="form-title">Customer Inquiry Form</h2>
-                <p class="form-subtitle">Tell us about your perfect shed or garden room. Fill out the form below and we'll be in touch.</p>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Your Name <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
+
+        <!-- Form Header -->
+        <div class="form-header">
+            <h1>Customer Inquiry Form</h1>
+            <p>Tell us about your perfect shed or garden room. Fill out the form below and we'll be in touch.</p>
+        </div>
+
+        <!-- Success Message -->
+        <div class="success-message" id="successMessage">
+            <strong>Thank you!</strong> Your inquiry has been submitted. We'll get back to you soon.
+        </div>
+
+        <!-- Form -->
+        <form id="inquiryForm">
+            <!-- Contact Details Section -->
+            <div class="section-title">Your Details</div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Your Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                    <div class="error-message">Please enter your name</div>
                 </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="postcode">Postcode <span class="required">*</span></label>
-                        <input type="text" id="postcode" name="postcode" required>
-                    </div>
-                </div>
-                
-                <div class="form-group full">
-                    <label for="address">Full Address <span class="required">*</span></label>
-                    <input type="text" id="address" name="address" required>
-                </div>
-                
-                <div style="border-top: 2px solid #f0f0f0; padding-top: 30px; margin-top: 30px;">
-                    <h3 style="color: #1a1a1a; font-size: 18px; margin-bottom: 20px; font-weight: 600;">What Are You Looking For?</h3>
-                    
-                    <div class="form-group">
-                        <label for="category">Product Category <span class="required">*</span></label>
-                        <select id="category" name="category" required onchange="updateShedOptions()">
-                            <option value="">-- Please Select --</option>
-                            <option value="Standard Sheds">Standard Sheds</option>
-                            <option value="Play Houses & Kids Bungalows">Play Houses & Kids Bungalows</option>
-                            <option value="Pet Houses">Pet Houses</option>
-                            <option value="Summerhouses">Summerhouses</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="product">Specific Model <span class="required">*</span></label>
-                        <select id="product" name="product" required onchange="showSpecs()">
-                            <option value="">-- Select a category first --</option>
-                        </select>
-                    </div>
-                    
-                    <div id="specsContainer" class="specs-box">
-                        <div id="specsContent"></div>
-                    </div>
-                    
-                    <div class="form-group" style="margin-top: 25px;">
-                        <label for="urgency">How Soon Do You Need It?</label>
-                        <select id="urgency" name="urgency">
-                            <option value="">-- Please Select --</option>
-                            <option value="As soon as possible">As soon as possible</option>
-                            <option value="Within 1 month">Within 1 month</option>
-                            <option value="Within 3 months">Within 3 months</option>
-                            <option value="Within 6 months">Within 6 months</option>
-                            <option value="Just browsing">Just browsing / No fixed timeline</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div style="border-top: 2px solid #f0f0f0; padding-top: 30px; margin-top: 30px;">
-                    <div class="form-group">
-                        <label for="message">Additional Information or Questions</label>
-                        <textarea id="message" name="message" placeholder="Tell us more about your project..."></textarea>
-                    </div>
-                </div>
-                
-                <div class="button-group">
-                    <button type="submit" class="btn-submit">Send Inquiry</button>
-                    <button type="reset" class="btn-reset">Clear Form</button>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message">Please enter a valid email address</div>
                 </div>
             </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="postcode">Postcode <span class="required">*</span></label>
+                    <input type="text" id="postcode" name="postcode" required>
+                    <div class="error-message">Please enter your postcode</div>
+                </div>
+            </div>
+
+            <div class="form-group form-row full">
+                <label for="address">Full Address <span class="required">*</span></label>
+                <input type="text" id="address" name="address" required>
+                <div class="error-message">Please enter your full address</div>
+            </div>
+
+            <!-- What Are They Looking For Section -->
+            <div class="section-title">What Are You Looking For?</div>
+
+            <div class="form-group">
+                <label for="category">Product Category <span class="required">*</span></label>
+                <select id="category" name="category" required onchange="updateModels()">
+                    <option value="">-- Please Select --</option>
+                    <option value="shed">Shed</option>
+                    <option value="garden-room">Garden Room</option>
+                    <option value="summerhouse">Summerhouse</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="error-message">Please select a category</div>
+            </div>
+
+            <div class="form-group">
+                <label for="model">Specific Model <span class="required">*</span></label>
+                <select id="model" name="model" required>
+                    <option value="">-- Select a category first --</option>
+                </select>
+                <div class="error-message">Please select a model</div>
+            </div>
+
+            <!-- Timeline Section -->
+            <div class="section-title">Timeline</div>
+
+            <div class="form-group">
+                <label>How Soon Do You Need It? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="urgent" name="timeline" value="Urgent (within 1 month)" required>
+                        <label for="urgent">Urgent (within 1 month)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="soon" name="timeline" value="Soon (1-3 months)">
+                        <label for="soon">Soon (1-3 months)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="flexible" name="timeline" value="Flexible (3+ months)">
+                        <label for="flexible">Flexible (3+ months)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="browsing" name="timeline" value="Just browsing">
+                        <label for="browsing">Just browsing for ideas</label>
+                    </div>
+                </div>
+                <div class="error-message">Please select a timeline</div>
+            </div>
+
+            <!-- Additional Details Section -->
+            <div class="section-title">Additional Details</div>
+
+            <div class="form-group form-row full">
+                <label for="message">Tell Us More <span class="required">*</span></label>
+                <textarea id="message" name="message" placeholder="Any specific requirements, size preferences, or other details..." required></textarea>
+                <div class="error-message">Please tell us a bit more about what you're looking for</div>
+            </div>
+
+            <div class="form-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="updates" name="updates" value="yes">
+                    <label for="updates">Yes, I'd like to receive updates on new products and special offers</label>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Inquiry</button>
         </form>
-        
-        <div class="footer">
-            <p><strong>Simply Sheds Scotland</strong><br>
-            📍 684 Old Dalkeith Rd, Danderhall EH22 1RR<br>
-            📞 0131 660 2928 | 📧 info@simplyshedsscotland.com</p>
-        </div>
     </div>
-    
+
     <script>
-        const productData = {
-            "Standard Sheds": {
-                "12mm Weatherboarding (Standard)": [
-                    { name: "6' x 3' Tool Store - £400 (+ £66 build)", specs: "12mm t&g weatherboarding • 18mm OSB floor & 11mm OSB roof • 45mm x 45mm CLS framing" },
-                    { name: "6' x 4' Apex or Pent - £534 (+ £66 build)", specs: "12mm t&g weatherboarding • 18mm OSB floor & 11mm OSB roof • 45mm x 45mm CLS framing" },
-                    { name: "6' x 4' Transverse Apex - £630 (+ £66 build)", specs: "12mm t&g weatherboarding • 18mm OSB floor & 11mm OSB roof • 45mm x 45mm CLS framing" },
-                    { name: "7' x 5' Apex or Pent - £674 (+ £66 build)", specs: "12mm t&g weatherboarding • 18mm OSB floor & 11mm OSB roof • 45mm x 45mm CLS framing" },
-                    { name: "8' x 6' Apex or Pent - £779 (+ £66 build)", specs: "12mm t&g weatherboarding • 18mm OSB floor & 11mm OSB roof • 45mm x 45mm CLS framing" },
-                    { name: "8' x 6' Transverse Apex - £830 (+ £66 build)", specs: "12mm t&g weatherboarding • 18mm OSB floor & 11mm OSB roof • 45mm x 45mm CLS framing" },
-                    { name: "8' x 8' Apex or Pent - £970 (+ £66 build)", specs: "12mm t&g weatherboarding • 18mm OSB floor & 11mm OSB roof • 45mm x 45mm CLS framing" },
-                    { name: "9' x 6' DD - £950 (+ £66 build)", specs: "12mm t&g weatherboarding • 18mm OSB floor & 11mm OSB roof • 45mm x 45mm CLS framing • Double door" },
-                    { name: "10' x 6' DD - £1025 (+ £75 build)", specs: "12mm t&g weatherboarding • 18mm OSB floor & 11mm OSB roof • 45mm x 45mm CLS framing • Double door" },
-                    { name: "10' x 8' DD - £1245 (+ £95 build)", specs: "12mm t&g weatherboarding • 18mm OSB floor & 11mm OSB roof • 45mm x 45mm CLS framing • Double door" },
-                    { name: "12' x 8' DD - £1570 (+ £120 build)", specs: "12mm t&g weatherboarding • 18mm OSB floor & 11mm OSB roof • 45mm x 45mm CLS framing • Double door" },
-                    { name: "12' x 10' DD - £2300 (+ £200 build)", specs: "12mm t&g weatherboarding • 18mm OSB floor & 11mm OSB roof • 45mm x 45mm CLS framing • Double door" },
-                    { name: "7' x 7' Corner - £1150 (+ £130 build)", specs: "12mm t&g weatherboarding • 18mm OSB floor & 11mm OSB roof • 45mm x 45mm CLS framing" },
-                    { name: "8' x 6' Potting - £1300 (+ £150 build)", specs: "12mm t&g weatherboarding • 18mm OSB floor & 11mm OSB roof • 45mm x 45mm CLS framing" }
-                ],
-                "15mm Weatherboarding (Premium)": [
-                    { name: "6' x 3' Tool Store - £450 (+ £66 build)", specs: "15mm t&g weatherboarding • 18mm OSB floor • 63mm x 38mm CLS framing" },
-                    { name: "6' x 4' Apex or Pent - £634 (+ £66 build)", specs: "15mm t&g weatherboarding • 18mm OSB floor • 63mm x 38mm CLS framing" },
-                    { name: "8' x 8' Apex or Pent - £1040 (+ £66 build)", specs: "15mm t&g weatherboarding • 18mm OSB floor • 63mm x 38mm CLS framing" },
-                    { name: "12' x 10' DD - £2600 (+ £230 build)", specs: "15mm t&g weatherboarding • 18mm OSB floor • 63mm x 38mm CLS framing" }
-                ]
-            },
-            "Play Houses & Kids Bungalows": {
-                "All Play Houses": [
-                    { name: "Tower Playhouse 7'x5' - £880 (+ £150 build)", specs: "Tower design • Safe for children • 7' tall" },
-                    { name: "Two Story 6'x7' - £830 (+ £88 build)", specs: "Two-storey design • Safe for children" },
-                    { name: "Playhouse 8'x6' - £600 (+ £75 build)", specs: "Single storey • Safe for children" }
-                ]
-            },
-            "Pet Houses": {
-                "Dog Kennels & Runs": [
-                    { name: "Large Dog Kennel 12'x6' - £1100 (+ £130 build)", specs: "Large kennel with attached run • 12' x 6'" },
-                    { name: "Medium Dog Kennel 10'x6' - £990 (+ £90 build)", specs: "Medium kennel with attached run • 10' x 6'" },
-                    { name: "Small Dog Kennel 9'x4' - £850 (+ £75 build)", specs: "Small kennel with attached run • 9' x 4'" }
-                ]
-            },
-            "Summerhouses": {
-                "All Summerhouses": [
-                    { name: "8' x 8' with Veranda - £1600 (+ £150 build)", specs: "Includes veranda • 8' x 8' main space" },
-                    { name: "12' x 8' Pent - £3400 (+ £250 build)", specs: "Pent roof style • 12' x 8'" },
-                    { name: "10' x 8' Bay Window - £2800 (+ £250 build)", specs: "Bay window feature • 10' x 8'" }
-                ]
-            }
+        // Product models database
+        const models = {
+            shed: [
+                'Classic 8x6',
+                'Classic 8x10',
+                'Classic 10x12',
+                'Premium 10x14',
+                'Premium 12x16'
+            ],
+            'garden-room': [
+                'Insulated Studio 12x14',
+                'Premium Garden Room 14x16',
+                'Executive 16x20'
+            ],
+            summerhouse: [
+                'Cosy 10x10',
+                'Social 12x14',
+                'Grand 14x18'
+            ],
+            other: [
+                'Custom Build'
+            ]
         };
-        
-        function updateShedOptions() {
-            const categorySelect = document.getElementById('category');
-            const productSelect = document.getElementById('product');
-            const specsContainer = document.getElementById('specsContainer');
-            const selectedCategory = categorySelect.value;
-            
-            productSelect.innerHTML = '<option value="">-- Please Select --</option>';
-            specsContainer.classList.remove('active');
-            
-            if (selectedCategory && productData[selectedCategory]) {
-                const categoryData = productData[selectedCategory];
-                Object.keys(categoryData).forEach(function(specType) {
-                    const optgroup = document.createElement('optgroup');
-                    optgroup.label = specType;
-                    categoryData[specType].forEach(function(product) {
-                        const option = document.createElement('option');
-                        option.value = JSON.stringify(product);
-                        option.textContent = product.name;
-                        optgroup.appendChild(option);
-                    });
-                    productSelect.appendChild(optgroup);
+
+        // Update model dropdown based on category
+        function updateModels() {
+            const category = document.getElementById('category').value;
+            const modelSelect = document.getElementById('model');
+            modelSelect.innerHTML = '<option value="">-- Select a model --</option>';
+
+            if (category && models[category]) {
+                models[category].forEach(model => {
+                    const option = document.createElement('option');
+                    option.value = model;
+                    option.textContent = model;
+                    modelSelect.appendChild(option);
                 });
             }
         }
-        
-        function showSpecs() {
-            const productSelect = document.getElementById('product');
-            const specsContainer = document.getElementById('specsContainer');
-            const specsContent = document.getElementById('specsContent');
-            
-            if (productSelect.value) {
-                try {
-                    const product = JSON.parse(productSelect.value);
-                    specsContent.innerHTML = `<h4>${product.name}</h4><div class="spec-item"><span class="spec-label">Specifications:</span><br>${product.specs}</div>`;
-                    specsContainer.classList.add('active');
-                } catch (e) {
-                    console.error('Error parsing product:', e);
+
+        // Form validation and submission
+        const form = document.getElementById('inquiryForm');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Clear previous errors
+            document.querySelectorAll('.form-group.error').forEach(group => {
+                group.classList.remove('error');
+            });
+
+            // Validate form
+            let isValid = true;
+            const requiredFields = form.querySelectorAll('[required]');
+
+            requiredFields.forEach(field => {
+                if (field.type === 'radio') {
+                    const radioGroup = form.querySelectorAll(`input[name="${field.name}"]`);
+                    const isChecked = Array.from(radioGroup).some(radio => radio.checked);
+                    if (!isChecked) {
+                        isValid = false;
+                        radioGroup.forEach(radio => {
+                            radio.closest('.form-group')?.classList.add('error');
+                        });
+                    }
+                } else if (!field.value.trim()) {
+                    isValid = false;
+                    field.closest('.form-group')?.classList.add('error');
+                } else if (field.type === 'email' && !isValidEmail(field.value)) {
+                    isValid = false;
+                    field.closest('.form-group')?.classList.add('error');
                 }
+            });
+
+            if (!isValid) return;
+
+            // Collect form data
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+
+            try {
+                // Send to form handler (API endpoint)
+                const response = await fetch('/api/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    showSuccess();
+                    form.reset();
+                    updateModels();
+                } else {
+                    alert('There was an error submitting your form. Please try again.');
+                }
+            } catch (error) {
+                console.error('Form submission error:', error);
+                alert('There was an error submitting your form. Please try again.');
             }
+        });
+
+        // Email validation
+        function isValidEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+
+        // Show success message
+        function showSuccess() {
+            const successMsg = document.getElementById('successMessage');
+            successMsg.classList.add('show');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            setTimeout(() => {
+                successMsg.classList.remove('show');
+            }, 5000);
         }
     </script>
 </body>
